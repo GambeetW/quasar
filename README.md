@@ -1,6 +1,6 @@
-# test (test)
+# Quasar Project
 
-test description
+This is just a test project to check the vuejs along with the store, reducer and state. XD
 
 ## Install the dependencies
 ```bash
