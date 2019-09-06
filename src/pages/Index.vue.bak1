@@ -1,0 +1,63 @@
+<template>
+  <q-page padding>
+    <ul>
+      <task v-for="(list, index) in tasks"
+      :key="index"
+      :listX="list"
+      :index="index">{{ list.name }}</task>
+    </ul>
+  </q-page>
+</template>
+
+<style>
+
+</style>
+
+<script>
+// Here its importing the component
+import Task from 'components/Task.vue'
+
+export default {
+  data () {
+    return {
+      tasks: [
+        {
+          id: 1,
+          name: 'Go to shop',
+          dueDate: '2019/05/12',
+          dueTime: '18:20'
+        },
+        {
+          id: 2,
+          name: 'Buy Some clothes',
+          dueDate: '2019/05/12',
+          dueTime: '18:30'
+        },
+        {
+          id: 3,
+          name: 'Get Banana',
+          dueDate: '2019/05/12',
+          dueTime: '18:40'
+        },
+        {
+          id: 4,
+          name: 'Buy 2 dozens of eggs',
+          dueDate: '2019/05/12',
+          dueTime: '18:50'
+        }
+      ]
+    }
+  },
+  methods: {
+    deleteTask (index) {
+      console.log(index)
+      // this.tasks.pop(index)
+      this.tasks.splice(index, 1)
+    }
+  },
+  components: {
+    // 'task': require('components/Task.vue').default
+    'task': Task
+  }
+}
+</script>

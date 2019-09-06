@@ -1,0 +1,15 @@
+<template>
+  <li>
+    <div>{{ listX.name }} - {{ index+1 }}</div>
+    <small>{{ listX.dueDate }} @ {{ listX.dueTime }}</small>
+    <button @click="deleteTask(index)">X</button>
+  </li>
+</template>
+<style scoped>
+
+</style>
+<script>
+export default {
+  props: ['listX', 'indexs']
+}
+</script>
